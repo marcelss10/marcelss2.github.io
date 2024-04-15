@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Convite para Sair</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    #convite {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 10px;
+        display: inline-block;
+    }
+    button {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.5s ease;
+    }
+    #sim {
+        background-color: #4CAF50;
+        color: white;
+    }
+    #nao {
+        background-color: #f44336;
+        color: white;
+    }
+</style>
+</head>
+<body>
+<div id="convite">
+    <h2>Aceita sair comigo?</h2>
+    <button id="sim">Sim</button>
+    <button id="nao" onclick="window.location='https://br.pinterest.com/pin/702350504410932058/';">Não</button>
+</div>
+
+<script>
+    document.getElementById('sim').onclick = function(event) {
+        var btn = event.target;
+        var x = Math.random() * 300 - 150; // Mover horizontalmente (-150 a 150 pixels)
+        var y = Math.random() * 300 - 150; // Mover verticalmente (-150 a 150 pixels)
+        btn.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+    };
+</script>
+</body>
+</html>
